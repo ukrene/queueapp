@@ -1,0 +1,52 @@
+body {
+	background-color: #fff;
+}
+
+h2{
+	background-color: #eee;font-size:20px;padding:15px;margin:0;
+}
+a {
+	color: #1f766d;
+}
+p {
+	padding: 20px;
+	font-family: arial;
+	font-size: 16px;
+	color: #222;
+	line-height: 20px;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #1f766d;
+	color: #eee;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #1f766d;
+	color: #eee;
+}
+
+.logo {
+	margin: 0 auto;
+	max-height:120px;
+	display: block;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover{
+	background-color: #1f766d;
+	color: #eee;
+}
+
+.tab-content{
+	margin-top:10px;
+}
+
+form{
+	border: 1px #eee solid;
+	padding:15px;
+}
