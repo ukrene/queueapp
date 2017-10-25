@@ -22,7 +22,6 @@
 	if (mysqli_num_rows($result) > 0) {
 		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<tr><td>";
-			//echo $data["name"];
 			echo $row['id'];
 			echo "</td><td>";
 			echo $row['type'];
@@ -31,7 +30,7 @@
 			echo "</td><td>";
 			echo $row['service'];
 			echo "</td><td>";
-			echo $row['queued'];
+			echo date("G:i", strtotime($row['queued']));
 			echo "</td></tr>";
 		}
 	} else {

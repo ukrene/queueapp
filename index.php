@@ -1,5 +1,6 @@
 <?php
 	include 'dbh.php';
+	date_default_timezone_set('Europe/London');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +8,7 @@
   <title>Q-Up v.0.1</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -23,7 +25,7 @@
         var title = $("#title").val();
         var fname = $("#fname").val();
         var lname = $("#lname").val();
-        
+
   			$("#list").load("load-list.php", {
   				service: service,
           oname: oname,
@@ -127,7 +129,7 @@
             				echo "</td><td>";
                     echo $row['service'];
             				echo "</td><td>";
-                    echo $row['queued'];
+                    echo date("G:i", strtotime($row['queued']));
             				echo "</td></tr>";
             			}
             		} else {
